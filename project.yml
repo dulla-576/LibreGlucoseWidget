@@ -1,0 +1,56 @@
+name: LibreGlucoseWidget
+options:
+  bundleIdPrefix: com.abdullah
+  deploymentTarget:
+    iOS: "26.0"
+configs:
+  Debug: debug
+  Release: release
+configFiles:
+  Debug: Config/Shared.xcconfig
+  Release: Config/Shared.xcconfig
+packages:
+  LibreGlucoseCore:
+    path: .
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 1.0
+    DEVELOPMENT_TEAM: ""
+targets:
+  LibreGlucoseWidgetApp:
+    type: application
+    platform: iOS
+    sources:
+      - App
+    info:
+      path: App/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget
+        CODE_SIGN_STYLE: Automatic
+    dependencies:
+      - package: LibreGlucoseCore
+      - target: LibreGlucoseLockWidget
+        embed: true
+  LibreGlucoseLockWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - Widget
+    info:
+      path: Widget/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget.widget
+        CODE_SIGN_STYLE: Automatic
+        SKIP_INSTALL: YES
+    dependencies:
+      - package: LibreGlucoseCore
+schemes:
+  LibreGlucoseWidgetApp:
+    build:
+      targets:
+        LibreGlucoseWidgetApp: all
+        LibreGlucoseLockWidget: all

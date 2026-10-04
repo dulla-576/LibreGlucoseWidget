@@ -34,6 +34,17 @@ public enum GlucoseTrend: String, Codable, Equatable, Sendable {
         case .unknown: "?"
         }
     }
+
+    init(libreLinkUpValue: Int) {
+        switch libreLinkUpValue {
+        case 1: self = .rapidlyFalling
+        case 2: self = .slowlyFalling
+        case 3: self = .steady
+        case 4: self = .slowlyRising
+        case 5: self = .rapidlyRising
+        default: self = .unknown
+        }
+    }
 }
 
 public struct GlucoseReading: Codable, Equatable, Sendable {

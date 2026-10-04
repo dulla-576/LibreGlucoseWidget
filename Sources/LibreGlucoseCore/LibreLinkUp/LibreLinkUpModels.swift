@@ -24,6 +24,18 @@ public struct AuthSession: Codable, Equatable, Sendable {
     }
 }
 
+public struct Connection: Codable, Equatable, Sendable {
+    public let patientID: String
+
+    public init(patientID: String) {
+        self.patientID = patientID
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case patientID = "patientId"
+    }
+}
+
 public struct LibreLinkUpConfiguration: Equatable, Sendable {
     public let entryBaseURL: URL
     public let product: String
@@ -64,4 +76,39 @@ struct LoginUser: Decodable {
 struct LoginTicket: Decodable {
     let token: String
     let expires: TimeInterval
+}
+
+struct ConnectionsResponse: Decodable {
+    let status: Int
+    let data: [Connection]?
+}
+
+struct GraphResponse: Decodable {
+    let status: Int
+    let data: GraphData?
+}
+
+struct GraphData: Decodable {
+    let connection: GraphConnection?
+}
+
+struct GraphConnection: Decodable {
+    let uom: Int?
+    let glucoseMeasurement: LibreGlucoseMeasurement?
+}
+
+struct LibreGlucoseMeasurement: Decodable {
+    let factoryTimestamp: String?
+    let timestamp: String?
+    let value: Decimal?
+    let trendArrow: Int?
+    let glucoseUnits: Int?
+
+    private enum CodingKeys: String, CodingKey {
+        case factoryTimestamp = "FactoryTimestamp"
+        case timestamp = "Timestamp"
+        case value = "Value"
+        case trendArrow = "TrendArrow"
+        case glucoseUnits = "GlucoseUnits"
+    }
 }

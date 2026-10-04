@@ -1,0 +1,10 @@
+{
+  "status": 0,
+  "data": {
+    "user": { "id": "synthetic-user" },
+    "authTicket": {
+      "token": "synthetic-token",
+      "expires": 1800000000
+    }
+  }
+}

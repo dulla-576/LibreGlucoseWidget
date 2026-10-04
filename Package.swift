@@ -13,6 +13,10 @@ let package = Package(
     ],
     targets: [
         .target(name: "LibreGlucoseCore"),
-        .testTarget(name: "LibreGlucoseCoreTests", dependencies: ["LibreGlucoseCore"])
+        .testTarget(
+            name: "LibreGlucoseCoreTests",
+            dependencies: ["LibreGlucoseCore"],
+            resources: [.process("Fixtures")]
+        )
     ]
 )

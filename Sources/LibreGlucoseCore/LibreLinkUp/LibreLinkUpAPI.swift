@@ -163,8 +163,15 @@ public struct LibreLinkUpAPI: Sendable {
         guard baseURL.scheme == "https", let host = baseURL.host else {
             return false
         }
-        return host == "api.libreview.io"
-            || host.hasPrefix("api-") && host.hasSuffix(".libreview.io")
+        if host == "api.libreview.io" {
+            return true
+        }
+        let suffix = ".libreview.io"
+        guard host.hasPrefix("api-"), host.hasSuffix(suffix) else {
+            return false
+        }
+        let region = String(host.dropFirst("api-".count).dropLast(suffix.count))
+        return isValid(region: region)
     }
 
     private func authorizedRequest(

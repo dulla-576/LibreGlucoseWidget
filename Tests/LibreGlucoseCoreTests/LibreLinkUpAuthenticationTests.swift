@@ -56,7 +56,8 @@ final class LibreLinkUpAuthenticationTests: XCTestCase {
     func testLoginRejectsNonHTTPSOrNonLibreViewEntryHost() async throws {
         let badURLs = [
             URL(string: "http://api.libreview.io")!,
-            URL(string: "https://api.example.test")!
+            URL(string: "https://api.example.test")!,
+            URL(string: "https://api-eu2.attacker.libreview.io")!
         ]
 
         for baseURL in badURLs {

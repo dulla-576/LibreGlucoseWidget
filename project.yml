@@ -27,6 +27,8 @@ targets:
       - SharedIOS
     info:
       path: App/Info.plist
+      properties:
+        LibreKeychainAccessGroup: "$(AppIdentifierPrefix)group.com.abdullah.libreglucosewidget"
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget
@@ -44,6 +46,8 @@ targets:
       - SharedIOS
     info:
       path: Widget/Info.plist
+      properties:
+        LibreKeychainAccessGroup: "$(AppIdentifierPrefix)group.com.abdullah.libreglucosewidget"
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget.widget

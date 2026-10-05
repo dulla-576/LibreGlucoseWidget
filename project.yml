@@ -24,12 +24,14 @@ targets:
     platform: iOS
     sources:
       - App
+      - SharedIOS
     info:
       path: App/Info.plist
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget
         CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_ENTITLEMENTS: Config/LibreGlucoseWidgetApp.entitlements
     dependencies:
       - package: LibreGlucoseCore
       - target: LibreGlucoseLockWidget
@@ -39,12 +41,14 @@ targets:
     platform: iOS
     sources:
       - Widget
+      - SharedIOS
     info:
       path: Widget/Info.plist
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget.widget
         CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_ENTITLEMENTS: Config/LibreGlucoseLockWidget.entitlements
         SKIP_INSTALL: YES
     dependencies:
       - package: LibreGlucoseCore

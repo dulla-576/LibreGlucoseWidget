@@ -1,0 +1,7 @@
+{
+  "status": 0,
+  "data": [
+    { "patientId": "patient-1" },
+    { "patientId": "patient-2" }
+  ]
+}

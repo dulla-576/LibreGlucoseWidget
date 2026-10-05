@@ -1,0 +1,15 @@
+{
+  "status": 0,
+  "data": {
+    "connection": {
+      "glucoseMeasurement": {
+        "FactoryTimestamp": "2026-10-05T01:15:00Z",
+        "Timestamp": "10/5/2026 3:15:00 AM",
+        "ValueInMgPerDl": 142,
+        "TrendArrow": 1,
+        "GlucoseUnits": 1,
+        "Value": 142
+      }
+    }
+  }
+}

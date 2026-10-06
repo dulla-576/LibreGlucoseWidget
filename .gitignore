@@ -5,3 +5,15 @@ DerivedData/
 *.xcuserstate
 xcuserdata/
 
+# Local signing and secret material
+*.mobileprovision
+*.p12
+*.cer
+*.key
+Secrets.xcconfig
+.env
+.env.*
+
+# Local verification output
+TestResults/
+*.xcresult

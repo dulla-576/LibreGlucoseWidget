@@ -20,5 +20,10 @@
 	<string>1</string>
 	<key>LibreKeychainAccessGroup</key>
 	<string>$(AppIdentifierPrefix)group.com.abdullah.libreglucosewidget</string>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.widgetkit-extension</string>
+	</dict>
 </dict>
 </plist>

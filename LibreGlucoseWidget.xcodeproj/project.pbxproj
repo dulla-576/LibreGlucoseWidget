@@ -13,6 +13,8 @@
 		38C4D8581793838950B1BECD /* LibreGlucoseLockWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9AA69DBA59F9F8F55712B161 /* LibreGlucoseLockWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		39A0035801BAF97C216ADB33 /* KeychainCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D33753BC1ED8BE266078EF7 /* KeychainCredentialStore.swift */; };
 		431F4268AE3D660FA0B85DA9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D541A993380F4811415E5E2 /* DashboardView.swift */; };
+		43A86B8D154E63099F4B3D57 /* GlucoseTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19224977E3A3CA2BAB9BFCA /* GlucoseTimelineProvider.swift */; };
+		470389FE83FD9179F8112FA5 /* GlucoseWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4808E15A05DBD675571E9 /* GlucoseWidgetEntry.swift */; };
 		5C5E1DB3D14ECB892951732E /* KeychainCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D33753BC1ED8BE266078EF7 /* KeychainCredentialStore.swift */; };
 		7C30932814625C0004025570 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53471CFD23CBEBEE1F13B51 /* RootView.swift */; };
 		89C7BC2DED513DA4ED045EC4 /* LibreGlucoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 31F5BB78F1BB75D8AFD4E2E0 /* LibreGlucoseCore */; };
@@ -20,6 +22,7 @@
 		D2D498168B39DBD8D1430D76 /* LibreGlucoseLockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB740282E0C672495729C8A /* LibreGlucoseLockWidget.swift */; };
 		D845DF66E8446D1FF80ADCC9 /* LibreGlucoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 38084EE2CB4A7896BB469114 /* LibreGlucoseCore */; };
 		E3012480F137D7ED9D4C008D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81B8E2C386440CFDB51E4A9 /* AppModel.swift */; };
+		E3CEFD5CA1537FDB8F049427 /* GlucoseWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69758CE6985DFD8A1D546E00 /* GlucoseWidgetView.swift */; };
 		F56967FFE218ED61B96971B9 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26288297B8A00FD74FA090D2 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,8 @@
 		26288297B8A00FD74FA090D2 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		2D541A993380F4811415E5E2 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		55827BA517F98B5DC1463EC0 /* LibreGlucoseWidgetApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LibreGlucoseWidgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69758CE6985DFD8A1D546E00 /* GlucoseWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseWidgetView.swift; sourceTree = "<group>"; };
+		71F4808E15A05DBD675571E9 /* GlucoseWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseWidgetEntry.swift; sourceTree = "<group>"; };
 		7D33753BC1ED8BE266078EF7 /* KeychainCredentialStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredentialStore.swift; sourceTree = "<group>"; };
 		8F47FD272B6D58B06E9DAACA /* LibreGlucoseWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreGlucoseWidgetApp.swift; sourceTree = "<group>"; };
 		9AA69DBA59F9F8F55712B161 /* LibreGlucoseLockWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LibreGlucoseLockWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +67,7 @@
 		B0ED0992FB4A91F4AF7896CC /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
 		B81B8E2C386440CFDB51E4A9 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		BBBBD5DADBF9484D4D9F45EB /* SharedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedContainer.swift; sourceTree = "<group>"; };
+		C19224977E3A3CA2BAB9BFCA /* GlucoseTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseTimelineProvider.swift; sourceTree = "<group>"; };
 		D53471CFD23CBEBEE1F13B51 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +139,9 @@
 		95C1A5161344838B283282C7 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				C19224977E3A3CA2BAB9BFCA /* GlucoseTimelineProvider.swift */,
+				71F4808E15A05DBD675571E9 /* GlucoseWidgetEntry.swift */,
+				69758CE6985DFD8A1D546E00 /* GlucoseWidgetView.swift */,
 				01BB8752488EB9CD3D8F6AE0 /* Info.plist */,
 				ADB740282E0C672495729C8A /* LibreGlucoseLockWidget.swift */,
 			);
@@ -267,6 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A86B8D154E63099F4B3D57 /* GlucoseTimelineProvider.swift in Sources */,
+				470389FE83FD9179F8112FA5 /* GlucoseWidgetEntry.swift in Sources */,
+				E3CEFD5CA1537FDB8F049427 /* GlucoseWidgetView.swift in Sources */,
 				39A0035801BAF97C216ADB33 /* KeychainCredentialStore.swift in Sources */,
 				D2D498168B39DBD8D1430D76 /* LibreGlucoseLockWidget.swift in Sources */,
 				1E06C0600ECFC3B30ED7DEAF /* SharedContainer.swift in Sources */,

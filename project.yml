@@ -29,6 +29,11 @@ targets:
       path: App/Info.plist
       properties:
         LibreKeychainAccessGroup: "$(AppIdentifierPrefix)group.com.abdullah.libreglucosewidget"
+        CFBundleURLTypes:
+          - CFBundleTypeRole: Editor
+            CFBundleURLName: com.abdullah.libreglucosewidget
+            CFBundleURLSchemes:
+              - libreglucose
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget
@@ -48,6 +53,8 @@ targets:
       path: Widget/Info.plist
       properties:
         LibreKeychainAccessGroup: "$(AppIdentifierPrefix)group.com.abdullah.libreglucosewidget"
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget.widget

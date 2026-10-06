@@ -7,8 +7,8 @@ struct GlucoseWidgetView: View {
 
     var body: some View {
         content
-            .padding(.horizontal, 8)
-            .padding(.vertical, 5)
+            .padding(.horizontal, 6)
+            .padding(.vertical, 4)
             .widgetURL(URL(string: "libreglucose://open"))
     }
 
@@ -16,27 +16,34 @@ struct GlucoseWidgetView: View {
     private var content: some View {
         switch entry.viewModel {
         case let .reading(value, unit, trend, detail, freshness):
-            HStack(spacing: 8) {
+            HStack(spacing: 5) {
                 VStack(alignment: .leading, spacing: 1) {
-                    HStack(alignment: .firstTextBaseline, spacing: 4) {
+                    HStack(alignment: .firstTextBaseline, spacing: 2) {
                         Text(value)
-                            .font(.system(.title2, design: .rounded, weight: .bold))
+                            .font(.system(size: 22, weight: .bold, design: .rounded))
                             .monospacedDigit()
-                            .minimumScaleFactor(0.7)
+                            .lineLimit(1)
+                            .fixedSize(horizontal: true, vertical: false)
                         Text(trend)
-                            .font(.headline.weight(.bold))
+                            .font(.system(size: 17, weight: .bold))
+                            .lineLimit(1)
+                            .fixedSize(horizontal: true, vertical: false)
                     }
                     Text(unit)
                         .font(.caption2)
                         .foregroundStyle(.secondary)
+                        .lineLimit(1)
                 }
+                .fixedSize(horizontal: true, vertical: false)
+                .layoutPriority(1)
 
                 Divider()
 
                 Text(detail)
-                    .font(.caption.weight(freshness == .stale ? .semibold : .regular))
+                    .font(.caption2.weight(freshness == .stale ? .semibold : .regular))
                     .lineLimit(2)
-                    .minimumScaleFactor(0.75)
+                    .minimumScaleFactor(0.7)
+                    .allowsTightening(true)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .accessibilityElement(children: .ignore)

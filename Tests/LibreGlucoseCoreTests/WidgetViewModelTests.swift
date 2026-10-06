@@ -56,7 +56,7 @@ final class WidgetViewModelTests: XCTestCase {
         )
 
         let model = WidgetReadingViewModel.make(
-            outcome: .failed,
+            outcome: .failed(.libreLinkUp(.transportFailure)),
             fallback: cached,
             now: date(hour: 14, minute: 47),
             calendar: utcCalendar,
@@ -88,7 +88,7 @@ final class WidgetViewModelTests: XCTestCase {
 
     func testFailedRefreshWithoutCacheIsUnavailable() {
         let model = WidgetReadingViewModel.make(
-            outcome: .failed,
+            outcome: .failed(.libreLinkUp(.transportFailure)),
             fallback: nil,
             now: date(hour: 14, minute: 40),
             calendar: utcCalendar,

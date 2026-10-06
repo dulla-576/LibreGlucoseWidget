@@ -25,7 +25,7 @@ final class SecretRedactionTests: XCTestCase {
             LibreLinkUpError.transportFailure,
             ReadingCacheError.cacheFailure,
             CredentialStoreError.storageFailure,
-            RefreshOutcome.failed
+            RefreshOutcome.failed(.libreLinkUp(.malformedResponse))
         ]
 
         for value in values {

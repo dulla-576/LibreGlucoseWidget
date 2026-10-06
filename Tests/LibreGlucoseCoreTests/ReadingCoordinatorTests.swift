@@ -58,8 +58,25 @@ final class ReadingCoordinatorTests: XCTestCase {
         let outcome = await coordinator.refresh()
         let callCount = await source.callCount()
 
-        XCTAssertEqual(outcome, .failed)
+        XCTAssertEqual(outcome, .failed(.libreLinkUp(.unauthorized)))
         XCTAssertEqual(callCount, 2)
+    }
+
+    func testLibreLinkUpFailureWithoutCachePreservesSafeReason() async {
+        let store = MemoryCredentialStore(credentials: credentials)
+        let cache = MemoryReadingCache()
+        let source = QueueDataSource(results: [.failure(LibreLinkUpError.malformedResponse)])
+        let coordinator = ReadingCoordinator(dataSource: source, credentialStore: store, readingCache: cache)
+
+        let outcome = await coordinator.refresh()
+
+        XCTAssertEqual(outcome, .failed(.libreLinkUp(.malformedResponse)))
+    }
+
+    func testLibreLinkUpFailureProvidesSafeUserMessage() {
+        let failure = RefreshFailure.libreLinkUp(.malformedResponse)
+
+        XCTAssertEqual(failure.userMessage, "LibreLinkUp returned an unsupported response.")
     }
 
     func testNetworkFailureReturnsLastCachedReading() async throws {

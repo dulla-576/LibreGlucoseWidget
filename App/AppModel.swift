@@ -104,9 +104,9 @@ final class AppModel: ObservableObject {
             phase = .connected(await dashboard(for: reading, isCached: true))
         case .signedOut:
             phase = .signedOut
-        case .failed:
+        case let .failed(failure):
             phase = .needsAttention(
-                message: "The latest reading could not be loaded. Check your connection or reconnect your LibreLinkUp account.",
+                message: failure.userMessage,
                 lastReading: previous
             )
         }

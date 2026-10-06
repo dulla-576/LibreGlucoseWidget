@@ -24,12 +24,21 @@ targets:
     platform: iOS
     sources:
       - App
+      - SharedIOS
     info:
       path: App/Info.plist
+      properties:
+        LibreKeychainAccessGroup: "$(AppIdentifierPrefix)group.com.abdullah.libreglucosewidget"
+        CFBundleURLTypes:
+          - CFBundleTypeRole: Editor
+            CFBundleURLName: com.abdullah.libreglucosewidget
+            CFBundleURLSchemes:
+              - libreglucose
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget
         CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_ENTITLEMENTS: Config/LibreGlucoseWidgetApp.entitlements
     dependencies:
       - package: LibreGlucoseCore
       - target: LibreGlucoseLockWidget
@@ -39,13 +48,31 @@ targets:
     platform: iOS
     sources:
       - Widget
+      - SharedIOS
     info:
       path: Widget/Info.plist
+      properties:
+        LibreKeychainAccessGroup: "$(AppIdentifierPrefix)group.com.abdullah.libreglucosewidget"
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget.widget
         CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_ENTITLEMENTS: Config/LibreGlucoseLockWidget.entitlements
         SKIP_INSTALL: YES
+    dependencies:
+      - package: LibreGlucoseCore
+  LibreGlucoseProjectTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - XcodeTests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget.project-tests
+        GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGN_STYLE: Automatic
     dependencies:
       - package: LibreGlucoseCore
 schemes:
@@ -54,3 +81,7 @@ schemes:
       targets:
         LibreGlucoseWidgetApp: all
         LibreGlucoseLockWidget: all
+        LibreGlucoseProjectTests: [test]
+    test:
+      targets:
+        - LibreGlucoseProjectTests

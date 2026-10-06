@@ -7,11 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CE27ECEBA2C44F47B785B9F /* LibreGlucoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 17312C814E891EF17082A019 /* LibreGlucoseCore */; };
+		13D169345663E1713F3D2433 /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED0992FB4A91F4AF7896CC /* DisclaimerView.swift */; };
 		1DE8A29A3688C27CCEB88C28 /* LibreGlucoseWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F47FD272B6D58B06E9DAACA /* LibreGlucoseWidgetApp.swift */; };
+		1E06C0600ECFC3B30ED7DEAF /* SharedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBBD5DADBF9484D4D9F45EB /* SharedContainer.swift */; };
 		38C4D8581793838950B1BECD /* LibreGlucoseLockWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9AA69DBA59F9F8F55712B161 /* LibreGlucoseLockWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		39A0035801BAF97C216ADB33 /* KeychainCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D33753BC1ED8BE266078EF7 /* KeychainCredentialStore.swift */; };
+		431F4268AE3D660FA0B85DA9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D541A993380F4811415E5E2 /* DashboardView.swift */; };
+		43A86B8D154E63099F4B3D57 /* GlucoseTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19224977E3A3CA2BAB9BFCA /* GlucoseTimelineProvider.swift */; };
+		470389FE83FD9179F8112FA5 /* GlucoseWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4808E15A05DBD675571E9 /* GlucoseWidgetEntry.swift */; };
+		5C5E1DB3D14ECB892951732E /* KeychainCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D33753BC1ED8BE266078EF7 /* KeychainCredentialStore.swift */; };
+		7C30932814625C0004025570 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53471CFD23CBEBEE1F13B51 /* RootView.swift */; };
 		89C7BC2DED513DA4ED045EC4 /* LibreGlucoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 31F5BB78F1BB75D8AFD4E2E0 /* LibreGlucoseCore */; };
+		965591728DB8626FFCBD38EC /* SharedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBBD5DADBF9484D4D9F45EB /* SharedContainer.swift */; };
+		A5C1F65C75560A9C9324DB61 /* ProjectIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0F8F0EDEAD3C49D66BBE39 /* ProjectIntegrationTests.swift */; };
 		D2D498168B39DBD8D1430D76 /* LibreGlucoseLockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB740282E0C672495729C8A /* LibreGlucoseLockWidget.swift */; };
 		D845DF66E8446D1FF80ADCC9 /* LibreGlucoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 38084EE2CB4A7896BB469114 /* LibreGlucoseCore */; };
+		E3012480F137D7ED9D4C008D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81B8E2C386440CFDB51E4A9 /* AppModel.swift */; };
+		E3CEFD5CA1537FDB8F049427 /* GlucoseWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69758CE6985DFD8A1D546E00 /* GlucoseWidgetView.swift */; };
+		F56967FFE218ED61B96971B9 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26288297B8A00FD74FA090D2 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +54,25 @@
 
 /* Begin PBXFileReference section */
 		01BB8752488EB9CD3D8F6AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		05D8D251739F6BF5C73505F7 /* lock-widget */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "lock-widget"; path = .; sourceTree = SOURCE_ROOT; };
 		06D6D0057A7D90DFCE172A76 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		18AA04636E640A017CC62C28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		41343FF403E2757148493394 /* librelinkup-data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "librelinkup-data"; path = .; sourceTree = SOURCE_ROOT; };
+		1B0F8F0EDEAD3C49D66BBE39 /* ProjectIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationTests.swift; sourceTree = "<group>"; };
+		26288297B8A00FD74FA090D2 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		2D541A993380F4811415E5E2 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		55827BA517F98B5DC1463EC0 /* LibreGlucoseWidgetApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LibreGlucoseWidgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61B9E227C70372B74C899207 /* LibreGlucoseProjectTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = LibreGlucoseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69758CE6985DFD8A1D546E00 /* GlucoseWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseWidgetView.swift; sourceTree = "<group>"; };
+		71F4808E15A05DBD675571E9 /* GlucoseWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseWidgetEntry.swift; sourceTree = "<group>"; };
+		7D33753BC1ED8BE266078EF7 /* KeychainCredentialStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredentialStore.swift; sourceTree = "<group>"; };
 		8F47FD272B6D58B06E9DAACA /* LibreGlucoseWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreGlucoseWidgetApp.swift; sourceTree = "<group>"; };
 		9AA69DBA59F9F8F55712B161 /* LibreGlucoseLockWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LibreGlucoseLockWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB740282E0C672495729C8A /* LibreGlucoseLockWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreGlucoseLockWidget.swift; sourceTree = "<group>"; };
+		B0ED0992FB4A91F4AF7896CC /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		B81B8E2C386440CFDB51E4A9 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		BBBBD5DADBF9484D4D9F45EB /* SharedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedContainer.swift; sourceTree = "<group>"; };
+		C19224977E3A3CA2BAB9BFCA /* GlucoseTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseTimelineProvider.swift; sourceTree = "<group>"; };
+		D53471CFD23CBEBEE1F13B51 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +81,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				89C7BC2DED513DA4ED045EC4 /* LibreGlucoseCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C2E42CC51365FF081BB42A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CE27ECEBA2C44F47B785B9F /* LibreGlucoseCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,15 +103,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15813A5923C997DEAF4CBE58 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				7D33753BC1ED8BE266078EF7 /* KeychainCredentialStore.swift */,
+				BBBBD5DADBF9484D4D9F45EB /* SharedContainer.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		23057549CECF8391A1D0FE19 = {
 			isa = PBXGroup;
 			children = (
 				C920F9D0730F3C2984065853 /* App */,
 				55DF3B94C73D1E5F8DC329E9 /* Config */,
 				6AF067ABC89029E6B832B4C2 /* Packages */,
+				285833EDC270D3D7D195863D /* SharedIOS */,
 				95C1A5161344838B283282C7 /* Widget */,
+				501ABF91A08FFC6A00A854FE /* XcodeTests */,
 				9F219E15A9183D76447688E5 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		285833EDC270D3D7D195863D /* SharedIOS */ = {
+			isa = PBXGroup;
+			children = (
+				15813A5923C997DEAF4CBE58 /* Infrastructure */,
+			);
+			path = SharedIOS;
+			sourceTree = "<group>";
+		};
+		501ABF91A08FFC6A00A854FE /* XcodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				1B0F8F0EDEAD3C49D66BBE39 /* ProjectIntegrationTests.swift */,
+			);
+			path = XcodeTests;
 			sourceTree = "<group>";
 		};
 		55DF3B94C73D1E5F8DC329E9 /* Config */ = {
@@ -91,7 +152,7 @@
 		6AF067ABC89029E6B832B4C2 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				41343FF403E2757148493394 /* librelinkup-data */,
+				05D8D251739F6BF5C73505F7 /* lock-widget */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -99,6 +160,9 @@
 		95C1A5161344838B283282C7 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				C19224977E3A3CA2BAB9BFCA /* GlucoseTimelineProvider.swift */,
+				71F4808E15A05DBD675571E9 /* GlucoseWidgetEntry.swift */,
+				69758CE6985DFD8A1D546E00 /* GlucoseWidgetView.swift */,
 				01BB8752488EB9CD3D8F6AE0 /* Info.plist */,
 				ADB740282E0C672495729C8A /* LibreGlucoseLockWidget.swift */,
 			);
@@ -109,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				9AA69DBA59F9F8F55712B161 /* LibreGlucoseLockWidget.appex */,
+				61B9E227C70372B74C899207 /* LibreGlucoseProjectTests.xctest */,
 				55827BA517F98B5DC1463EC0 /* LibreGlucoseWidgetApp.app */,
 			);
 			name = Products;
@@ -117,8 +182,13 @@
 		C920F9D0730F3C2984065853 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B81B8E2C386440CFDB51E4A9 /* AppModel.swift */,
+				2D541A993380F4811415E5E2 /* DashboardView.swift */,
+				B0ED0992FB4A91F4AF7896CC /* DisclaimerView.swift */,
 				18AA04636E640A017CC62C28 /* Info.plist */,
 				8F47FD272B6D58B06E9DAACA /* LibreGlucoseWidgetApp.swift */,
+				D53471CFD23CBEBEE1F13B51 /* RootView.swift */,
+				26288297B8A00FD74FA090D2 /* SignInView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -126,6 +196,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C3AD461EBFE9F44DE2595A33 /* LibreGlucoseProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D51012DD1710C4E126C02F8 /* Build configuration list for PBXNativeTarget "LibreGlucoseProjectTests" */;
+			buildPhases = (
+				54D3A3F25FA1999BDFADBC0F /* Sources */,
+				48C2E42CC51365FF081BB42A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibreGlucoseProjectTests;
+			packageProductDependencies = (
+				17312C814E891EF17082A019 /* LibreGlucoseCore */,
+			);
+			productName = LibreGlucoseProjectTests;
+			productReference = 61B9E227C70372B74C899207 /* LibreGlucoseProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E7EE1AD5A5CBE17BB0C6DDEF /* LibreGlucoseWidgetApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D7BE33C9F8094D4B27D6A7 /* Build configuration list for PBXNativeTarget "LibreGlucoseWidgetApp" */;
@@ -175,6 +264,10 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					C3AD461EBFE9F44DE2595A33 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
 					E7EE1AD5A5CBE17BB0C6DDEF = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
@@ -204,6 +297,7 @@
 			targets = (
 				E7EE1AD5A5CBE17BB0C6DDEF /* LibreGlucoseWidgetApp */,
 				E93F7E58AC2CFB4159006BDF /* LibreGlucoseLockWidget */,
+				C3AD461EBFE9F44DE2595A33 /* LibreGlucoseProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -213,7 +307,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3012480F137D7ED9D4C008D /* AppModel.swift in Sources */,
+				431F4268AE3D660FA0B85DA9 /* DashboardView.swift in Sources */,
+				13D169345663E1713F3D2433 /* DisclaimerView.swift in Sources */,
+				5C5E1DB3D14ECB892951732E /* KeychainCredentialStore.swift in Sources */,
 				1DE8A29A3688C27CCEB88C28 /* LibreGlucoseWidgetApp.swift in Sources */,
+				7C30932814625C0004025570 /* RootView.swift in Sources */,
+				965591728DB8626FFCBD38EC /* SharedContainer.swift in Sources */,
+				F56967FFE218ED61B96971B9 /* SignInView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54D3A3F25FA1999BDFADBC0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C1F65C75560A9C9324DB61 /* ProjectIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +330,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A86B8D154E63099F4B3D57 /* GlucoseTimelineProvider.swift in Sources */,
+				470389FE83FD9179F8112FA5 /* GlucoseWidgetEntry.swift in Sources */,
+				E3CEFD5CA1537FDB8F049427 /* GlucoseWidgetView.swift in Sources */,
+				39A0035801BAF97C216ADB33 /* KeychainCredentialStore.swift in Sources */,
 				D2D498168B39DBD8D1430D76 /* LibreGlucoseLockWidget.swift in Sources */,
+				1E06C0600ECFC3B30ED7DEAF /* SharedContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +412,7 @@
 		1F55FCC0BF09B4DD0EAD8C7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/LibreGlucoseLockWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -377,10 +492,27 @@
 			};
 			name = Debug;
 		};
+		4F9E311D4B349568EED28F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abdullah.libreglucosewidget.project-tests";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
 		61EF61BC1A5FD8754347AF10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/LibreGlucoseWidgetApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = App/Info.plist;
@@ -397,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/LibreGlucoseWidgetApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = App/Info.plist;
@@ -412,6 +545,7 @@
 		B1D66858C11E7ECB09B31F3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/LibreGlucoseLockWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -425,6 +559,22 @@
 			};
 			name = Debug;
 		};
+		F7DB8818B0FCE65EF8895CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abdullah.libreglucosewidget.project-tests";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -433,6 +583,15 @@
 			buildConfigurations = (
 				45CD06AE453810F624BB7379 /* Debug */,
 				19320E12BEDFF871BAF0C23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0D51012DD1710C4E126C02F8 /* Build configuration list for PBXNativeTarget "LibreGlucoseProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F9E311D4B349568EED28F94 /* Debug */,
+				F7DB8818B0FCE65EF8895CA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -465,6 +624,10 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		17312C814E891EF17082A019 /* LibreGlucoseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LibreGlucoseCore;
+		};
 		31F5BB78F1BB75D8AFD4E2E0 /* LibreGlucoseCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LibreGlucoseCore;

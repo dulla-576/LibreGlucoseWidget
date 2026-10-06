@@ -26,13 +26,26 @@ public struct AuthSession: Codable, Equatable, Sendable {
 
 public struct Connection: Codable, Equatable, Sendable {
     public let patientID: String
+    public let firstName: String?
+    public let lastName: String?
 
-    public init(patientID: String) {
+    public init(patientID: String, firstName: String? = nil, lastName: String? = nil) {
         self.patientID = patientID
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+
+    public var displayName: String {
+        let parts = [firstName, lastName]
+            .compactMap { $0?.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+        return parts.isEmpty ? "Shared profile" : parts.joined(separator: " ")
     }
 
     private enum CodingKeys: String, CodingKey {
         case patientID = "patientId"
+        case firstName
+        case lastName
     }
 }
 

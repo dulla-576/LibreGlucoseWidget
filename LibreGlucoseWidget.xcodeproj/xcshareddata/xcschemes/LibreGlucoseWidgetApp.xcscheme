@@ -24,6 +24,20 @@
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C3AD461EBFE9F44DE2595A33"
+               BuildableName = "LibreGlucoseProjectTests.xctest"
+               BlueprintName = "LibreGlucoseProjectTests"
+               ReferencedContainer = "container:LibreGlucoseWidget.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
@@ -54,7 +68,20 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C3AD461EBFE9F44DE2595A33"
+               BuildableName = "LibreGlucoseProjectTests.xctest"
+               BlueprintName = "LibreGlucoseProjectTests"
+               ReferencedContainer = "container:LibreGlucoseWidget.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

@@ -10,6 +10,7 @@ final class LibreLinkUpReadingTests: XCTestCase {
         let connection = try await api.firstConnection(session: session)
 
         XCTAssertEqual(connection.patientID, "patient-1")
+        XCTAssertEqual(connection.displayName, "Ada Lovelace")
         let requests = await transport.recordedRequests()
         XCTAssertEqual(requests.count, 1)
         XCTAssertEqual(requests[0].url?.absoluteString, "https://api-eu2.libreview.io/llu/connections")

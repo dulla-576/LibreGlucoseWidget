@@ -2,6 +2,8 @@
 
 A native iPhone companion app and rectangular Lock Screen widget that shows the latest glucose value, the unit reported by LibreLinkUp, a trend arrow, and the reading's source time. The project targets iOS 26 and runs entirely on the phone; it has no developer-operated backend.
 
+This is an independent, unofficial open-source project. It is not affiliated with, endorsed by, or supported by Abbott, FreeStyle Libre, or LibreLinkUp. Libre, FreeStyle Libre, and LibreLinkUp are trademarks of their respective owners.
+
 > This is a personal convenience display. It is not an alarm, a dosing aid, or a replacement for the official Libre app. Always use the official app and your clinician's guidance for treatment decisions.
 
 ## What it does

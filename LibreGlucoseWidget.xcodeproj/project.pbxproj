@@ -19,6 +19,7 @@
 		5C5E1DB3D14ECB892951732E /* KeychainCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D33753BC1ED8BE266078EF7 /* KeychainCredentialStore.swift */; };
 		7C30932814625C0004025570 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53471CFD23CBEBEE1F13B51 /* RootView.swift */; };
 		89C7BC2DED513DA4ED045EC4 /* LibreGlucoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 31F5BB78F1BB75D8AFD4E2E0 /* LibreGlucoseCore */; };
+		9266B3B64938BA342CE22463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958C565DC6C70EDD9783C839 /* Assets.xcassets */; };
 		965591728DB8626FFCBD38EC /* SharedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBBD5DADBF9484D4D9F45EB /* SharedContainer.swift */; };
 		A5C1F65C75560A9C9324DB61 /* ProjectIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0F8F0EDEAD3C49D66BBE39 /* ProjectIntegrationTests.swift */; };
 		D2D498168B39DBD8D1430D76 /* LibreGlucoseLockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB740282E0C672495729C8A /* LibreGlucoseLockWidget.swift */; };
@@ -54,10 +55,10 @@
 
 /* Begin PBXFileReference section */
 		01BB8752488EB9CD3D8F6AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		05D8D251739F6BF5C73505F7 /* lock-widget */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "lock-widget"; path = .; sourceTree = SOURCE_ROOT; };
 		06D6D0057A7D90DFCE172A76 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		18AA04636E640A017CC62C28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1B0F8F0EDEAD3C49D66BBE39 /* ProjectIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationTests.swift; sourceTree = "<group>"; };
+		05D8D251739F6BF5C73505F7 /* lock-widget */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "lock-widget"; path = .; sourceTree = SOURCE_ROOT; };
 		26288297B8A00FD74FA090D2 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		2D541A993380F4811415E5E2 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		55827BA517F98B5DC1463EC0 /* LibreGlucoseWidgetApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LibreGlucoseWidgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +67,7 @@
 		71F4808E15A05DBD675571E9 /* GlucoseWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseWidgetEntry.swift; sourceTree = "<group>"; };
 		7D33753BC1ED8BE266078EF7 /* KeychainCredentialStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredentialStore.swift; sourceTree = "<group>"; };
 		8F47FD272B6D58B06E9DAACA /* LibreGlucoseWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreGlucoseWidgetApp.swift; sourceTree = "<group>"; };
+		958C565DC6C70EDD9783C839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AA69DBA59F9F8F55712B161 /* LibreGlucoseLockWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LibreGlucoseLockWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB740282E0C672495729C8A /* LibreGlucoseLockWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreGlucoseLockWidget.swift; sourceTree = "<group>"; };
 		B0ED0992FB4A91F4AF7896CC /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				B81B8E2C386440CFDB51E4A9 /* AppModel.swift */,
+				958C565DC6C70EDD9783C839 /* Assets.xcassets */,
 				2D541A993380F4811415E5E2 /* DashboardView.swift */,
 				B0ED0992FB4A91F4AF7896CC /* DisclaimerView.swift */,
 				18AA04636E640A017CC62C28 /* Info.plist */,
@@ -220,6 +223,7 @@
 			buildConfigurationList = E1D7BE33C9F8094D4B27D6A7 /* Build configuration list for PBXNativeTarget "LibreGlucoseWidgetApp" */;
 			buildPhases = (
 				04F61F28B26ED985C3515C9E /* Sources */,
+				49427EFF2A5E24814C28A2AA /* Resources */,
 				A14F32D7215ADB5B803EAD2A /* Frameworks */,
 				F2F2E51491665DAA08950499 /* Embed Foundation Extensions */,
 			);
@@ -301,6 +305,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49427EFF2A5E24814C28A2AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9266B3B64938BA342CE22463 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04F61F28B26ED985C3515C9E /* Sources */ = {

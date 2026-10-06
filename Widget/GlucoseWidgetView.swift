@@ -6,13 +6,10 @@ struct GlucoseWidgetView: View {
     let entry: GlucoseWidgetEntry
 
     var body: some View {
-        ZStack {
-            AccessoryWidgetBackground()
-            content
-                .padding(.horizontal, 8)
-                .padding(.vertical, 5)
-        }
-        .widgetURL(URL(string: "libreglucose://open"))
+        content
+            .padding(.horizontal, 8)
+            .padding(.vertical, 5)
+            .widgetURL(URL(string: "libreglucose://open"))
     }
 
     @ViewBuilder

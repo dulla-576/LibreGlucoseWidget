@@ -63,9 +63,25 @@ targets:
         SKIP_INSTALL: YES
     dependencies:
       - package: LibreGlucoseCore
+  LibreGlucoseProjectTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - XcodeTests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.abdullah.libreglucosewidget.project-tests
+        GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGN_STYLE: Automatic
+    dependencies:
+      - package: LibreGlucoseCore
 schemes:
   LibreGlucoseWidgetApp:
     build:
       targets:
         LibreGlucoseWidgetApp: all
         LibreGlucoseLockWidget: all
+        LibreGlucoseProjectTests: [test]
+    test:
+      targets:
+        - LibreGlucoseProjectTests

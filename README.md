@@ -4,13 +4,11 @@ A native iPhone companion app and rectangular Lock Screen widget that shows the 
 
 This is an independent, unofficial open-source project. It is not affiliated with, endorsed by, or supported by Abbott, FreeStyle Libre, or LibreLinkUp. Libre, FreeStyle Libre, and LibreLinkUp are trademarks of their respective owners.
 
-> This is a personal convenience display. It is not an alarm, a dosing aid, or a replacement for the official Libre app. Always use the official app and your clinician's guidance for treatment decisions.
-
 ## What it does
 
 - Signs in to a LibreLinkUp follower account.
 - Fetches the first shared profile's latest reading.
-- Preserves Libre's `mg/dL` or `mmol/L` unit without conversion.
+- Preserves Libre's unit without conversion.
 - Shows the value, trend, local source time, and age in the app and widget.
 - Marks a reading `STALE` only when its source timestamp is more than 60 minutes old.
 - Requests another widget timeline after 15 minutes. WidgetKit controls the actual schedule, so updates can be later.
@@ -19,46 +17,10 @@ This is an independent, unofficial open-source project. It is not affiliated wit
 ## Requirements
 
 - A Mac with Xcode 26.6 or newer.
-- XcodeGen (`brew install xcodegen`).
-- An iPhone running iOS 26 or newer. The intended iPhone 13 Pro is supported; it uses the normal Lock Screen widget flow and has no Always-On Display setup.
-- An Apple Account added to Xcode. A free Personal Team can install development builds on your own devices, but its provisioning profiles expire after seven days and the app must then be rebuilt and reinstalled. If Xcode refuses the App Groups or Keychain Sharing entitlements for the free team, an Apple Developer Program membership is required.
-- A LibreLinkUp follower account that already sees the sensor owner's readings in the official LibreLinkUp app. Do not use or share anyone else's credentials without their permission.
-
-## Generate and open the project
-
-1. Open Xcode once and accept its license and any requested platform installation.
-2. From the repository root, generate the Xcode project:
-
-   ```sh
-   xcodegen generate
-   ```
-
-3. Open `LibreGlucoseWidget.xcodeproj`.
-
-The generated `.xcodeproj` is committed for convenience, but `project.yml` is the source of truth. Run `xcodegen generate` again after changing project settings.
-
-## Configure signing for your iPhone
-
-1. In Xcode, select the `LibreGlucoseWidgetApp` target, open **Signing & Capabilities**, enable automatic signing, and choose your team.
-2. Repeat for the `LibreGlucoseLockWidget` target using the same team.
-3. If any identifier is already taken, replace the default identifiers with values unique to you:
-
-   - App: `com.abdullah.libreglucosewidget`
-   - Widget: `com.abdullah.libreglucosewidget.widget`
-   - App Group: `group.com.abdullah.libreglucosewidget`
-
-   Search before editing so every occurrence remains aligned:
-
-   ```sh
-   rg -n 'com\.abdullah\.libreglucosewidget|group\.com\.abdullah\.libreglucosewidget' \
-     project.yml Config SharedIOS
-   ```
-
-   Change the two bundle identifiers and the shared App Group consistently in `project.yml`, both files in `Config/`, and `SharedIOS/Infrastructure/SharedContainer.swift`. Keep the widget bundle identifier as a child of the app identifier. Then run `xcodegen generate` again.
-4. In both targets, confirm **App Groups** contains the same group and **Keychain Sharing** contains the same group. Let Xcode repair provisioning if prompted.
-5. Connect the iPhone, select it as the run destination, and run the `LibreGlucoseWidgetApp` scheme.
-
-With a free Personal Team, Apple limits free provisioning and the profile expires after seven days. Reconnect the phone and run the app from Xcode again when it expires.
+- XcodeGen 
+- An iPhone running iOS 26 or newer. 
+- An Apple Account added to Xcode. 
+- A LibreLinkUp follower account that already sees the sensor owner's readings in the official LibreLinkUp app. 
 
 ## Connect LibreLinkUp
 
@@ -76,7 +38,7 @@ LibreLinkUp access in this project uses an unofficial, undocumented interface. A
 3. Choose **Libre Glucose** and add its rectangular widget.
 4. Tap **Done**.
 
-The widget displays health information while the Lock Screen is visible. Only add it if that visibility is acceptable to you. Tapping it opens the companion app. On the iPhone 13 Pro there is no Always-On Display step, and this project does not add one.
+The widget displays health information while the Lock Screen is visible. Only add it if that visibility is acceptable to you. Tapping it opens the companion app.
 
 ## Tests and local verification
 
@@ -116,6 +78,6 @@ Replace the simulator name and OS with an installed simulator shown by `xcrun si
 
 See `docs/manual-test-checklist.md` for the final simulator and physical-device checks.
 
-## Publishing later
+## Publishing
 
-Personal installation is a development build. Making this public would additionally require a paid Apple Developer Program membership, unique production identifiers, App Store Connect metadata and privacy disclosures, App Review, a support/privacy policy, and a sustainable security and maintenance process. The larger issue is LibreLinkUp: before distribution, obtain permission or a supported integration agreement from Abbott and have the API use and health-data handling reviewed. Do not ship a public app that depends on an undocumented service without that authorization.
+Personal installation is a development build.
